@@ -59,8 +59,8 @@ async function processAbstract(abstract) {
   // Here's an example implementation that extracts keywords and creates nodes and edges based on them
   const keywords = abstract.split(" ").filter(word => word.length > 5);
   graphJsonObject = await useOpenaiToConvertTextToGraph(abstract);
-  const nodes = graphJsonObject["nodes"] //"A,B,C" //keywords.join(",");
-  const edges = graphJsonObject["edges"] //"A>B,B>C,A>C"//keywords.map((keyword, index) => `${keyword}>${keywords[(index + 1) % keywords.length]}`).join(",");
+  const nodes = graphJsonObject["nodes"] 
+  const edges = graphJsonObject["edges"]
   document.getElementById("nodes").value = nodes;
   document.getElementById("edges").value = edges;
 }
