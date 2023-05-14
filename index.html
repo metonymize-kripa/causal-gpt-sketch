@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Causal Arxiv</title>
+  <style>
+    #graph-container {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" />
+</head>
+<body>
+  <h1>Arxiv Paper Abstract Viewer</h1>
+  <div>
+    <label for="paper-id">Arxiv Paper ID:</label>
+    <input type="text" id="paper-id" value="2109.10808">
+    <button onclick="getPaper()">Get Paper</button>
+    <input type="text" id="openai-api-key" value="sk-????">
+  </div>
+  <div id="paper-abstract"></div>
+
+  <h1>Directed Graph Visualization</h1>
+  <div>
+    <label for="nodes">Nodes:</label>
+    <input type="text" id="nodes" value="A,B,C">
+
+    <label for="edges">Edges:</label>
+    <input type="text" id="edges" value="A->B,B->C,A->C">
+
+    <input type="button" value="Visualize Graph" onclick="visualizeGraph()">
+  </div>
+  <div id="graph-container"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
