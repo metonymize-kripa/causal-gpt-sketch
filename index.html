@@ -15,7 +15,7 @@
   <h1>Arxiv Paper Abstract Viewer</h1>
   <div>
     <label for="paper-id">Arxiv Paper ID:</label>
-    <input type="text" id="paper-id" value="2109.10808">
+    <input type="text" id="paper-id" value="2203.01235">
     <button onclick="getPaper()">Get Paper</button>
     <input type="text" id="openai-api-key" value="sk-????">
   </div>
@@ -24,10 +24,10 @@
   <h1>Directed Graph Visualization</h1>
   <div>
     <label for="nodes">Nodes:</label>
-    <input type="text" id="nodes" value="A,B,C">
+    <input type="text" id="nodes" value="researchProductivity,controversy,globalIndicators,knowledgeProduction,processOfCreation">
 
     <label for="edges">Edges:</label>
-    <input type="text" id="edges" value="A->B,B->C,A->C">
+    <input type="text" id="edges" value="controversy->researchProductivity,globalIndicators->knowledgeProduction,processOfCreation->knowledgeProduction,knowledgeProduction->researchProductivity,researchProductivity->improvingResearchProductivity,researchProductivity->realizingHumanCapacityToProduceKnowledge">
 
     <input type="button" value="Visualize Graph" onclick="visualizeGraph()">
   </div>
